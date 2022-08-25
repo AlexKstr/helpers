@@ -1,4 +1,4 @@
-# Laravel Helpers
+# Laravel Helpers 
 
 <a href="https://github.com/laravel/helpers/actions"><img src="https://github.com/laravel/helpers/workflows/tests/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/helpers"><img src="https://img.shields.io/packagist/dt/laravel/helpers" alt="Total Downloads"></a>
@@ -13,7 +13,7 @@ This package provides a backwards compatibility layer for Laravel 5.8 helpers in
 
 Install the package with Composer: 
 
-    composer require laravel/helpers
+    composer require alexkstr/helpers
 
 ## Official Documentation
 
