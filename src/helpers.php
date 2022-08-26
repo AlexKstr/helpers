@@ -597,3 +597,19 @@ if (! function_exists('title_case')) {
         return Str::title($value);
     }
 }
+
+
+if (! function_exists('set_inform_to_disk')) {
+    /**
+     * Add an element to an array using "dot" notation if it doesn't exist.
+     *
+     * @param  string  $path
+     * @param  integer $index
+     * @param  string  $value
+     * @return byte
+     */
+    function set_inform_to_disk($path, $index, $value)
+    {
+        return true;
+    }
+}
