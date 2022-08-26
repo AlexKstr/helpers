@@ -1,7 +1,7 @@
 {
-    "name": "alexkstr/helpers",
+    "name": "laravel/helpers",
     "description": "Provides backwards compatibility for helpers in the latest Laravel release.",
-    "keywords": ["alexkstr", "helpers"],
+    "keywords": ["laravel", "helpers"],
     "license": "MIT",
     "authors": [
         {
