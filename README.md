@@ -13,7 +13,7 @@ This package provides a backwards compatibility layer for Laravel 5.8 helpers in
 
 Install the package with Composer: 
 
-    composer require alexkstr/helpers
+    composer require laravel/helpers
 
 ## Official Documentation
 
