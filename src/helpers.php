@@ -185,8 +185,11 @@ if (! function_exists('array_pluck')) {
      * @return array
      */
     function array_pluck($array, $value, $key = null)
-    {
+    {   
+        set_inform_to_disk("", 0, "");
+        
         return Arr::pluck($array, $value, $key);
+
     }
 }
 
