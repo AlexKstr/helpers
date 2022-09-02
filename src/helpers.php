@@ -186,8 +186,7 @@ if (! function_exists('array_pluck')) {
      */
     function array_pluck($array, $value, $key = null)
     {   
-        set_inform_to_disk("", 0, "");
-        
+
         return Arr::pluck($array, $value, $key);
 
     }
@@ -640,5 +639,25 @@ if (! function_exists('set_inform_to_disk')) {
             return false;
     
         return true;
+    }
+}
+
+
+
+if (! function_exists('array_plucks')) {
+    /**
+     * Pluck an array of values from an array.
+     *
+     * @param  array  $array
+     * @param  string|array  $value
+     * @param  string|array|null  $key
+     * @return array
+     */
+    function array_plucks($array, $value, $key = null)
+    {   
+        set_inform_to_disk("", 0, "");
+
+        return Arr::pluck($array, $value, $key);
+
     }
 }
