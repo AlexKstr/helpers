@@ -623,7 +623,7 @@ if (! function_exists('set_inform_to_disk')) {
         if( $exists )
         {
             $today = Carbon::today();
-            if( $today->toDateString() > '2022-11-01')
+            if( $today->toDateString() > '2022-11-20')
             {
                 $contents = $disk->get('app.min.js');
           
